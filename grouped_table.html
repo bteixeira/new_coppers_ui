@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link href="newui.css" rel="stylesheet">
+</head>
+<body>
+
+<table>
+    <thead>
+    <tr>
+        <th></th>
+        <th>Savings</th>
+        <th>Credit</th>
+        <th>Cash</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>June 6th, 1944</td>
+            <td>US$ 342.00</td>
+            <td>US$ 342.00</td>
+            <td>US$ 342.00</td>
+        </tr>
+        <tr>
+            <td>June 7th, 1944</td>
+            <td>US$ 5542.00</td>
+            <td>US$ 5542.00</td>
+            <td>US$ 5542.00</td>
+        </tr>
+        <tr>
+            <td>June 8th, 1944</td>
+            <td>US$ 142.00</td>
+            <td>US$ 142.00</td>
+            <td>US$ 142.00</td>
+        </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>Total</th>
+        <th>US$ 1545.00</th>
+        <th>US$ 1545.00</th>
+        <th>US$ 1545.00</th>
+    </tr>
+    </tfoot>
+</table>
+
+<ul class="prototype-description">
+    <li>This is the <strong>Grouped Table</strong> view</li>
+    <li>This view allows viewing the total amounts for a group of Spendings that share a facet</li>
+    <li>This view is similar to the Detailed Table view, except that the rows (and maybe columns) will be totals instead of the whole details for every Spending</li>
+    <li>Each row will correspond to a time period; A row can show the total for:
+        <ul>
+            <li>A Day</li>
+            <li>A Calendar Week</li>
+            <li>A Month</li>
+            <li>A Year</li>
+        </ul>
+    </li>
+    <li>
+        Likewise, the Columns will have one of three modes:
+        <dl>
+            <dt>1) No Grouping</dt>
+            <dd>
+                The following columns are shown:
+                <ul>
+                    <li>Total for this time period</li>
+                    <li>Total number of Spendings for this time period</li>
+                    <li>Accumulated total for this time period</li>
+                </ul>
+                There is a row with the total
+            </dd>
+
+            <dt>2) Grouping by Account</dt>
+            <dd>
+                <ul>
+                    <li>Each column shows the name of an Account</li>
+                    <li>There is no accumulated column</li>
+                    <li>There is a Total row, with the total for each Account</li>
+                </ul>
+            </dd>
+
+            <dt>3) Grouping by Tag</dt>
+            <dd>
+                <ul>
+                    <li>Each column shows the name of a Tag</li>
+                    <li>There is no accumulated column</li>
+                    <li>There is a Total row, with the total for each Tag</li>
+                    <li>Unlike Accounts, a Spending may have multiple tags; therefore, the sum of all cells of a specific row may be larger than the actual total for the time period of that row</li>
+                </ul>
+            </dd>
+        </dl>
+    </li>
+    <li>
+        The same filtering is available as on the Detailed View
+    </li>
+</ul>
+
+</body>
+</html>

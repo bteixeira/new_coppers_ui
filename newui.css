@@ -203,6 +203,22 @@ h5,
 h6 {
   margin: 0;
 }
+
+/******** TABLE ********/
+td {
+  padding: 5px 15px;
+}
+tbody tr:nth-child(odd) {
+  background-color: #eaeaea;
+}
+.prototype-description {
+  max-width: 600px;
+  line-height: 1.5;
+}
+.prototype-description li:not(first-child) {
+  margin-top: 8px;
+}
+
 /***************** GRID ******************/
 .container {
   margin: 0 auto;
