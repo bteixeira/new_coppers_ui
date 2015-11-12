@@ -4,8 +4,15 @@ html {
   margin: 0;
   padding: 0;
   /*font-family: "Bookman", Georgia, "Times New Roman", serif;*/
-  font-family: 'Droid Serif', serif;
+  /*font-family: 'Droid Serif', serif;*/
+  font-family: Ubuntu;
   color: #999;
+}
+.header .title {
+	font-family: 'Droid Serif', serif;
+}
+.tags {
+	font-family: monospace;
 }
 button {
   width: 100%;
@@ -33,8 +40,9 @@ button {
   outline: 0;
   width: 100%;
   color: #7b7b7b;
-  font-size: 1em;
-  font-family: 'Droid Serif', serif;
+  font-size: 14px;
+  /*font-family: 'Droid Serif', serif;*/
+  font-family: Ubuntu;
 }
 .form-group.date-time {
   /*
@@ -96,14 +104,24 @@ select {
   box-sizing: content-box;
   border: solid 1px #d1d1d1;
   color: #7b7b7b;
-  font-size: 12px;
+  font-size: 14px;
   outline: 0;
   border-radius: 6px;
   padding: 3px 8px;
   background-color: #fff;
-  font-family: 'Droid Serif', serif;
+  /*font-family: 'Droid Serif', serif;*/
+  font-family: Ubuntu;
   width: 45px;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+
 .justified {
   line-height: 25px;
   text-align: justify;
@@ -123,6 +141,10 @@ select {
 .this-other-form-group label {
   display: inline-block;
   width: 20%;
+}
+.this-other-form-group input {
+	color: #7b7b7b;
+	font-family: Ubuntu;
 }
 .amount-wrapper {
   display: inline-block;
