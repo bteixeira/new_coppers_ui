@@ -214,6 +214,37 @@ td {
 tbody tr:nth-child(odd) {
   background-color: #eaeaea;
 }
+
+
+
+/* Max-width options */
+/* 1: remove display:table */
+/* You lose the vertical alignment between cells of different rows, including with the header *
+table, thead, tbody, tfoot, tr, td, th {
+  display: block;
+}
+td, th {
+  float: left;
+}
+tr:after {
+  content: "";
+  clear: both;
+  display: block;
+}
+/**/
+/* 2: fixed table layout */
+/* Cell contents overlap following cells */
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+/**/
+
+
+.mobile-container table .col-accumulated {
+  display: none;
+}
+
 .prototype-description {
   max-width: 600px;
   line-height: 1.5;
