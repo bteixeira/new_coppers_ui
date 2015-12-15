@@ -6,29 +6,40 @@
     <link href="newui.css" rel="stylesheet">
     <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
     <script src="js/detailed_table.js"></script>
+    <script src="js/mobile_container.js"></script>
 </head>
 <body>
+
+Choices:
+<ol>
+    <li>show only timestamp and amount</li>
+    <li>show timestamp, amount, and truncated tags</li>
+    <li>show timestamp and amount, and scroll tags column (looks awful on ff)</li>
+    <li>flip table, each entry is a column instead of a row</li>
+    <li>show each entry on two rows instead of one</li>
+    <li>...?</li>
+</ol>
 
 <div class="mobile-container">
     <table>
         <thead>
-        <tr>
-            <th>When</th>
-            <th>How much</th>
-            <th>Tags</th>
-            <th>Account</th>
-            <th class="col-accumulated"></th>
-        </tr>
+            <tr>
+                <th>When</th>
+                <th>How much</th>
+                <th class="tags-col">Tags</th>
+                <!--<th>Account</th>-->
+                <!--<th class="col-accumulated"></th>-->
+            </tr>
         </thead>
         <tbody>
         </tbody>
-        <tfoot>
-            <tr>
-                <td colspan="5">
-                    Total: US$ 1,505,163.21
-                </td>
-            </tr>
-        </tfoot>
+        <!--<tfoot>-->
+            <!--<tr>-->
+                <!--<td colspan="5">-->
+                    <!--Total: US$ 1,505,163.21-->
+                <!--</td>-->
+            <!--</tr>-->
+        <!--</tfoot>-->
     </table>
 </div>
 

@@ -211,8 +211,14 @@ table {
 td {
   padding: 5px 15px;
 }
+/*tbody tr:nth-child(4n+2) td,*/
+/*tbody tr:nth-child(4n+3) td{*/
 tbody tr:nth-child(odd) {
   background-color: #eaeaea;
+}
+tbody tr:hover {
+  color: #666;
+  cursor: pointer;
 }
 
 
@@ -238,10 +244,40 @@ table {
   table-layout: fixed;
   width: 100%;
 }
+table thead tr .tags-col {
+  /*width: 100%;*/
+}
+table td {
+  text-align: center;
+}
+table td .tags {
+  /*width: 100%;*/
+  overflow-x: hidden;
+  /*overflow-y: auto;*/
+  /*height: 30px;*/
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  text-align: left;
+}
 /**/
 
 
+.nowrap {
+  white-space: nowrap;
+}
+
 .mobile-container table .col-accumulated {
+  display: none;
+}
+
+.date-row {
+  display: none;
+}
+.mobile-container .date-row {
+  display: table-row;
+}
+
+.mobile-container .date {
   display: none;
 }
 
