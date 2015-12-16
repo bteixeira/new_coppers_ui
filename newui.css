@@ -275,6 +275,38 @@ table#truncate-tags td:nth-child(2) {
 
 
 
+table#flip {
+  display: block;
+}
+table#flip thead {
+  display: block;
+  float: left;
+}
+table#flip tbody {
+  display: block;
+  /*width: auto;*/
+  white-space: nowrap;
+  overflow: auto;
+}
+table#flip thead tr {
+  display: block;
+}
+table#flip tbody tr {
+  display: inline-block;
+}
+table#flip td {
+  display: block;
+}
+table#flip th {
+  display: block;
+  padding: 5px 15px;
+}
+table#flip th:first-of-type {
+  padding: 18px 15px;
+}
+
+
+
 
 /**/
 

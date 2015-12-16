@@ -129,3 +129,15 @@ $(function () {
         $('table#multi-row tbody').append($tr);
     });
 });
+
+$(function () {
+    data.forEach(function (entry) {
+        var $tr = $('<tr></tr>');
+        $tr.append('<td>' + entry.date + '</span></td>');
+        $tr.append('<td><span class="time">' + entry.time + '</span></td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $tr.append('<td>' + entry.account + '</td>');
+        $tr.append('<td><div class="tags">' + entry.tags.split(' ').map(function (tag) { return '#' + tag;}).join(' ') + '</div></td>');
+        $('table#flip tbody').append($tr);
+    });
+});
