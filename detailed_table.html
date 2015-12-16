@@ -12,41 +12,129 @@
 
 Choices:
 <ol>
-    <li>show only timestamp and amount</li>
-    <li>show timestamp, amount, and truncated tags</li>
-    <li>show timestamp and amount, and scroll tags column (looks awful on ff)</li>
-    <li>flip table, each entry is a column instead of a row</li>
-    <li>show each entry on two rows instead of one</li>
+    <li>show only timestamp and amount (no-tags)</li>
+    <li>show only timestamp (with date) and amount (no-tags-date)</li>
+    <li>show timestamp, amount, and truncated tags (truncate-tags)</li>
+    <li>show timestamp and amount, and scroll tags column (looks awful on ff) (scroll-tags)</li>
+    <li>flip table, each entry is a column instead of a row (flip)</li>
+    <li>show each entry on two or more rows instead of one (multi-row)</li>
     <li>...?</li>
 </ol>
 
+<!--<div class="mobile-container">-->
+    <!--<table>-->
+        <!--<thead>-->
+            <!--<tr>-->
+                <!--<th>When</th>-->
+                <!--<th>How much</th>-->
+                <!--<th class="tags-col">Tags</th>-->
+                <!--&lt;!&ndash;<th>Account</th>&ndash;&gt;-->
+                <!--&lt;!&ndash;<th class="col-accumulated"></th>&ndash;&gt;-->
+            <!--</tr>-->
+        <!--</thead>-->
+        <!--<tbody>-->
+        <!--</tbody>-->
+        <!--&lt;!&ndash;<tfoot>&ndash;&gt;-->
+            <!--&lt;!&ndash;<tr>&ndash;&gt;-->
+                <!--&lt;!&ndash;<td colspan="5">&ndash;&gt;-->
+                    <!--&lt;!&ndash;Total: US$ 1,505,163.21&ndash;&gt;-->
+                <!--&lt;!&ndash;</td>&ndash;&gt;-->
+            <!--&lt;!&ndash;</tr>&ndash;&gt;-->
+        <!--&lt;!&ndash;</tfoot>&ndash;&gt;-->
+    <!--</table>-->
+<!--</div>-->
+
 <div class="mobile-container">
-    <table>
+    <table id="no-tags">
+        <thead>
+        <tr>
+            <th>When</th>
+            <th>How much</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="mobile-container">
+    <table id="no-tags-date">
+        <thead>
+        <tr>
+            <th>When</th>
+            <th>How much</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="mobile-container">
+    <table id="truncate-tags">
+        <thead>
+        <tr>
+            <th>When</th>
+            <th>How much</th>
+            <th class="tags-col">Tags</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="mobile-container">
+    ???
+    <table id="scroll-tags">
+        <thead>
+        <tr>
+            <th>When</th>
+            <th>How much</th>
+            <th class="tags-col">Tags</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="mobile-container">
+    ???
+    <table id="flip">
+        <thead>
+        <tr>
+            <th>When</th>
+            <th>How much</th>
+            <th class="tags-col">Tags</th>
+        </tr>
+        </thead>
+        <tbody>
+        </tbody>
+    </table>
+</div>
+
+<div class="mobile-container">
+    <table id="multi-row">
         <thead>
             <tr>
                 <th>When</th>
                 <th>How much</th>
-                <th class="tags-col">Tags</th>
-                <!--<th>Account</th>-->
-                <!--<th class="col-accumulated"></th>-->
+                <th>Account</th>
+            </tr>
+            <tr>
+                <th colspan="3">Tags</th>
             </tr>
         </thead>
         <tbody>
         </tbody>
-        <!--<tfoot>-->
-            <!--<tr>-->
-                <!--<td colspan="5">-->
-                    <!--Total: US$ 1,505,163.21-->
-                <!--</td>-->
-            <!--</tr>-->
-        <!--</tfoot>-->
     </table>
 </div>
 
 <ul class="prototype-description">
     <li>This is the <strong>Detailed Table</strong> view</li>
     <li>In this view you see all information for every Spending in the current selection</li>
-    <li>The selection is made base on filtering by the following criteria:
+    <li>The selection is made based on filtering by the following criteria:
         <ul>
             <li>Time period</li>
             <li>Account</li>

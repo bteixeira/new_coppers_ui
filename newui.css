@@ -12,7 +12,7 @@ html {
 	font-family: 'Droid Serif', serif;
 }
 .tags {
-	font-family: monospace;
+	/*font-family: monospace;*/
 }
 button {
   width: 100%;
@@ -221,8 +221,6 @@ tbody tr:hover {
   cursor: pointer;
 }
 
-
-
 /* Max-width options */
 /* 1: remove display:table */
 /* You lose the vertical alignment between cells of different rows, including with the header *
@@ -259,6 +257,25 @@ table td .tags {
   text-overflow: ellipsis;
   text-align: left;
 }
+
+
+table#truncate-tags th {
+  width: 25%;
+}
+table#truncate-tags th:last-of-type {
+  width: 50%;
+}
+table#truncate-tags td {
+  padding: 5px;
+}
+table#truncate-tags td:nth-child(2) {
+  text-align: right;
+}
+
+
+
+
+
 /**/
 
 
