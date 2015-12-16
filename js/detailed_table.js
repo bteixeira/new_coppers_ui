@@ -120,6 +120,18 @@ $(function () {
 $(function () {
     data.forEach(function (entry) {
         var $tr = $('<tr></tr>');
+        $tr.append('<td><span class="date">' + entry.date + '</span> <span class="time">' + entry.time + '</span></td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $('table#scroll-fixed tbody').append($tr);
+        $tr = $('<tr></tr>');
+        $tr.append('<td><div class="tags">' + entry.tags.split(' ').map(function (tag) { return '#' + tag;}).join(' ') + '</div></td>');
+        $('table#scroll-slider tbody').append($tr);
+    });
+});
+
+$(function () {
+    data.forEach(function (entry) {
+        var $tr = $('<tr></tr>');
         $tr.append('<td>' + entry.date + ' <span class="time">' + entry.time + '</span></td>');
         $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
         $tr.append('<td>' + entry.account + '</td>');
