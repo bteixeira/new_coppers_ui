@@ -259,19 +259,46 @@ table td .tags {
 }
 
 
-table#truncate-tags th {
+table#date-truncate-tags th {
   width: 25%;
 }
-table#truncate-tags th:last-of-type {
+table#date-truncate-tags th:last-of-type {
   width: 50%;
 }
-table#truncate-tags td {
+table#date-truncate-tags td {
   padding: 5px;
 }
-table#truncate-tags td:nth-child(2) {
+table#date-truncate-tags td:nth-child(2) {
   text-align: right;
 }
 
+table#date-truncate-tags th {
+  width: 25%;
+}
+table#date-truncate-tags th:last-of-type {
+  width: 50%;
+}
+table#date-truncate-tags td {
+  padding: 5px;
+}
+table#date-truncate-tags td:nth-child(2) {
+  text-align: right;
+}
+
+
+table#date-multi-row tr {
+  background: inherit;
+}
+
+table#date-multi-row tr:nth-child(6n+1) {
+  background: #eaeaea;
+}
+table#date-multi-row tr:nth-child(6n+2) {
+  background: #eaeaea;
+}
+table#date-multi-row tr:nth-child(6n+3) {
+  background: #eaeaea;
+}
 
 
 

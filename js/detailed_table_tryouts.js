@@ -563,3 +563,50 @@ $(function () {
         $('table#flip tbody').append($tr);
     });
 });
+
+
+$(function () {
+    data.forEach(function (entry) {
+        var $tr = $('<tr></tr>');
+        $tr.append('<td>' + entry.date + '</span></td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $('table#date-no-tags tbody').append($tr);
+    });
+});
+
+$(function () {
+    var year;
+    var months = {
+        '10': 'Out',
+        '11': 'Nov',
+        '12': 'Dez'
+    };
+
+    data.forEach(function (entry) {
+        var date = entry.date.split('-');
+        if (year !== date[0]) {
+            year = date[0];
+            $('table#date-truncate-tags tbody').append('<tr><td>' + year + '</td></tr>');
+        }
+        var $tr = $('<tr></tr>');
+        $tr.append('<td>' + date[2] + ' ' + months[date[1]]  + '</td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $tr.append('<td><div class="tags">' + entry.tags.split(' ').map(function (tag) { return '#' + tag;}).join(' ') + '</div></td>');
+        $('table#date-truncate-tags tbody').append($tr);
+    });
+});
+
+$(function () {
+    data.forEach(function (entry) {
+        var $tr = $('<tr></tr>');
+        $tr.append('<td>' + entry.date + '</span></td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $('table#date-multi-row tbody').append($tr);
+        $tr = $('<tr></tr>');
+        $tr.append('<td colspan="2">' + entry.tags + '</span></td>');
+        $('table#date-multi-row tbody').append($tr);
+        $tr = $('<tr></tr>');
+        $tr.append('<td colspan="2">' + entry.description + '</span></td>');
+        $('table#date-multi-row tbody').append($tr);
+    });
+});
