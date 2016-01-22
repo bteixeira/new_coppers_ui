@@ -1,5 +1,8 @@
 $(function () {
-    $('.mobile-container').on('click', function() {
-        $(this).toggleClass('mobile-container');
+    $('.mobile-container .mobile-toggle').each(function () {
+        var $container = $(this).closest('.mobile-container');
+        $(this).on('click', function () {
+            $container.toggleClass('mobile-container');
+        });
     });
 });

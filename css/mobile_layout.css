@@ -27,6 +27,7 @@ html, body {
     float: left;
     font-size: 24px;
     font-weight: 700;
+    line-height: 1;
 }
 
 .header .nav-user {
@@ -46,7 +47,20 @@ img.icon {
 
 .navigation {
     /*clear: both;*/
-    margin: 5px;
+    padding: 15px 5px;
+    /*border-bottom: dashed 1px #999;*/
+    /*margin-bottom: 10px;*/
+}
+
+a {
+    color: inherit;
+    text-decoration: inherit;
+}
+
+.navigation:after {
+    clear: both;
+    content: "";
+    display: block;
 }
 
 .nav-column {
@@ -55,10 +69,14 @@ img.icon {
     text-align: center;
 }
 
+.nav-user {
+    /*line-height: 33px;*/
+}
+
 .batch-icon {
-    font-family:"Batch"; /*or whatever you've decalred your font name as*/
+    font-family: "Batch";
     /*font-size:24px;*/
-    line-height:1;
-    display:inline-block;
+    line-height: 1;
+    display: inline-block;
     font-style: normal;
 }

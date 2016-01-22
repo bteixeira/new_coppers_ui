@@ -272,19 +272,18 @@ table#date-truncate-tags td:nth-child(2) {
   text-align: right;
 }
 
-table#date-truncate-tags th {
+
+table#date-truncate-tags-mobile-layout td:first-of-type {
   width: 25%;
 }
-table#date-truncate-tags th:last-of-type {
-  width: 50%;
+table#date-truncate-tags-mobile-layout {
+  table-layout: auto;
 }
-table#date-truncate-tags td {
-  padding: 5px;
+table#date-truncate-tags-mobile-layout .date-row {
+  font-weight: bold;
+  text-align: left;
+  padding-top: 15px;
 }
-table#date-truncate-tags td:nth-child(2) {
-  text-align: right;
-}
-
 
 table#date-multi-row tr {
   background: inherit;
@@ -368,9 +367,9 @@ table#flip th:first-of-type {
   display: none;
 }
 
-.date-row {
-  display: none;
-}
+/*.date-row {*/
+  /*display: none;*/
+/*}*/
 .mobile-container .date-row {
   display: table-row;
 }

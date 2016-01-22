@@ -597,6 +597,28 @@ $(function () {
 });
 
 $(function () {
+    var prevDate;
+    var months = {
+        '10': 'Out',
+        '11': 'Nov',
+        '12': 'Dez'
+    };
+
+    data.forEach(function (entry) {
+        //var date = entry.date.split('-');
+        if (prevDate !== entry.date) {
+            prevDate = entry.date;
+            $('table#date-truncate-tags-mobile-layout tbody').append('<tr><td colspan="2" class="date-row">' + entry.date + '</td></tr>');
+        }
+        var $tr = $('<tr></tr>');
+        //$tr.append('<td>' + date[2] + ' ' + months[date[1]]  + '</td>');
+        $tr.append('<td>' + formatCurrency(entry.amount) + '</td>');
+        $tr.append('<td><div class="tags">' + entry.tags.split(' ').map(function (tag) { return '#' + tag;}).join(' ') + '</div></td>');
+        $('table#date-truncate-tags-mobile-layout tbody').append($tr);
+    });
+});
+
+$(function () {
     data.forEach(function (entry) {
         var $tr = $('<tr></tr>');
         $tr.append('<td>' + entry.date + '</span></td>');
