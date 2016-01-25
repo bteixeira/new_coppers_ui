@@ -283,6 +283,7 @@ table#date-truncate-tags-mobile-layout .date-row {
   font-weight: bold;
   text-align: left;
   padding-top: 15px;
+  padding-bottom: 15px;
 }
 
 table#date-multi-row tr {

@@ -21,6 +21,11 @@ html, body {
     color: white;
     font-size: 24px;
     padding: 5px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+
 }
 
 .header .title {
@@ -50,6 +55,7 @@ img.icon {
     padding: 15px 5px;
     /*border-bottom: dashed 1px #999;*/
     /*margin-bottom: 10px;*/
+    margin-top: 38px; /* HEADER HEIGHT */
 }
 
 a {
@@ -79,4 +85,70 @@ a {
     line-height: 1;
     display: inline-block;
     font-style: normal;
+}
+
+
+
+.form-add-new .amount-wrapper {
+    width: 100%;
+}
+.form-add-new .amount-wrapper:after {
+    content: "";
+}
+.form-add-new input#amount-euros {
+    width: 100%;
+    margin-left: 0;
+}
+.form-add-new .form-group {
+    margin-bottom: 5px;
+}
+
+
+
+
+.button-row-2 .button {
+    float: left;
+    width: calc(50% - 5px);
+}
+.button-row-2 .button:not(:first-of-type) {
+    margin-left: 10px;
+}
+.button.secondary {
+    background-color: #999;
+}
+
+
+
+
+.floater .title {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.floater {
+    border: solid 8px #999;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    border-right: none;
+    overflow: auto;
+    background-color: #fafafa;
+    position: fixed;
+    padding: 10px;
+    left: 100%;
+    width: 90%;
+    top: 38px;
+    bottom: 0;
+    transition: left 600ms;
+}
+
+.floater .trigger-close {
+    font-family: "Batch";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.floater.onscreen {
+    left: 10%;
 }
