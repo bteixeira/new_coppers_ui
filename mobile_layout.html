@@ -7,10 +7,12 @@
     <link href="css/batch_webfont.css" rel="stylesheet">
     <link href="newui.css" rel="stylesheet">
     <link href="css/mobile_layout.css" rel="stylesheet">
-    <script src="http://code.jquery.com/jquery-2.1.4.js"></script>
+    <link href="css/range.css" rel="stylesheet">
+    <script src="js/jquery-2.1.4.js"></script>
     <script src="js/detailed_table_tryouts.js"></script>
     <script src="js/mobile_container.js"></script>
-    <script src="js/mobile_layout/add_new.js"></script>
+    <script src="js/mobile_layout/mobile.js"></script>
+    <script src="js/mobile_layout/range_group.js"></script>
 </head>
 <body>
 
@@ -36,14 +38,14 @@
                 New
             </a>
         </div>
-        <div class="nav-column nav-filter">
+        <div class="nav-column" id="nav-filter">
             <!--<img src="Batch-master/SVG/intersect.svg" class="icon">-->
             <a href="#">
                 <span class="batch-icon">&#xf11e;</span>
                 Filter
             </a>
         </div>
-        <div class="nav-column nav-group">
+        <div class="nav-column" id="nav-group">
             <!--<img src="Batch-master/SVG/layout-content-right-2.svg" class="icon">-->
             <a href="#">
                 <span class="batch-icon">&#xf028;</span>
@@ -67,11 +69,11 @@
 </div>
 
 <div class="floater" id="floater-add-new">
-<a class="trigger-close">
+<a class="trigger-close" href="#">
     <span class="batch-icon">&#xf165;</span>
 </a>
 <form class="form-add-new">
-    <h1 class="title">Add Spending</h1>
+    <h2 class="title">Add Spending</h2>
 
     <div class="form-group date">
         <label>On</label>
@@ -267,6 +269,26 @@
         <button class="button main">Add</button>
     </div>
 </form>
+</div>
+
+<div class="floater" id="floater-filter">
+    <a class="trigger-close" href="#">
+        <span class="batch-icon">&#xf165;</span>
+    </a>
+    <h2 class="title">Apply Filters</h2>
+    <form>
+        <label for="amount">Amount:</label>
+        <div class="range-group" id="amount">
+            <input type="range" name="amount-min" id="amount-min" class="min" value="0">
+            <input type="range" name="amount-max" id="amount-max" class="max" value="100">
+        </div>
+
+        <label for="amount">Date:</label>
+        <div class="range-group" id="amount">
+            <input type="range" name="amount-min" id="amount-min" class="min" value="0">
+            <input type="range" name="amount-max" id="amount-max" class="max" value="100">
+        </div>
+    </form>
 </div>
 
 </body>

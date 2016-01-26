@@ -152,3 +152,15 @@ a {
 .floater.onscreen {
     left: 10%;
 }
+
+
+.range-group {
+    position: relative;
+}
+
+.range-group input[type="range"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
