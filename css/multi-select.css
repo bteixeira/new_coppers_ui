@@ -1,0 +1,77 @@
+.multi-select {
+    background: #666;
+    color: #bbb;
+    border-radius: 6px;
+    border-color: #fafafa;
+    border-style: inset;
+    border-width: 2px;
+    padding: 10px;
+}
+
+.multi-select ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.multi-select li/*:not(:last-of-type)*/ {
+    /*margin-bottom: 5px;*/
+    margin-top: 5px;
+}
+
+.multi-select .list-selected {
+    color: #fafafa;
+    border-bottom: dashed 1px #fafafa;
+    margin: 10px 0 2px;
+}
+
+.multi-select .heading {
+    color: #fafafa;
+    font-weight: bold;
+}
+.multi-select .heading:before {
+    content: "\f01d";
+    font-family: "Batch";
+}
+.multi-select.expanded .heading:before {
+    content: "\f01e";
+}
+
+.multi-select .list-available {
+    overflow: hidden;
+    height: 0;
+}
+
+.multi-select.expanded .list-available {
+    height: auto;
+}
+
+.multi-select .list-available .item:before {
+    content: "\f020 ";
+    font-family: "Batch";
+}
+
+.multi-select .list-available .item.selected {
+    color: #fafafa;
+}
+.multi-select .list-available .item.selected:before {
+    content: "\f164 ";
+}
+
+.multi-select .list-selected .item:before {
+    content: "\f165 ";
+    font-family: "Batch";
+}
+.multi-select.expanded .list-selected .item:before {
+    content: "\f164 ";
+}
+
+.multi-select .list-selected .item.inactive {
+    color: #bbb;
+}
+.multi-select .list-selected .item.inactive:before {
+    content: "\f020 ";
+}
+.multi-select .list-selected .item:last-of-type {
+    margin-bottom: 10px;
+}

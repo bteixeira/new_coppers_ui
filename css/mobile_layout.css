@@ -128,8 +128,8 @@ a {
 
 .floater {
     border: solid 8px #999;
-    border-top-left-radius: 8px;
-    border-bottom-left-radius: 8px;
+    border-top-width: 2px;
+    border-bottom-width: 0;
     border-right: none;
     overflow: auto;
     background-color: #fafafa;
@@ -156,11 +156,22 @@ a {
 
 .range-group {
     position: relative;
+    margin: 20px 0;
+    padding: 10px 0;
 }
 
 .range-group input[type="range"] {
     position: absolute;
     top: 0;
+    /*left: 0;*/
+    /*width: 100%;*/
+}
+
+.range-group input[type="range"].min {
     left: 0;
-    width: 100%;
+    right: 18px;
+}
+.range-group input[type="range"].max {
+    left: 18px;
+    right: 0;
 }

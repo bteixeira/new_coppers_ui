@@ -2,7 +2,7 @@
 /* RESET **************************************************************************************************************/
 input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: 100%; /* Specific width is required for Firefox. */
+    width: calc(100% - 18px); /* Specific width is required for Firefox. */
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -27,35 +27,51 @@ input[type=range]::-ms-track {
 
 /* THUMB **************************************************************************************************************/
 input[type=range]::-webkit-slider-thumb:active {
-    background: #f1f1f1;
+    /*background: #f1f1f1;*/
     cursor: -webkit-grabbing;
 }
 input[type=range].min::-webkit-slider-thumb {
-    background: red;
+    /*background: red;*/
+    /*background: url('../Batch-master/PNG/16x16/next.png') #fafafa;*/
+    background-image: url('../Batch-master/PNG/16x16/next.png');
+    /*margin-left: -9px;*/
+    /*left: -9px;*/
+}
+input[type=range].max::-webkit-slider-thumb {
+    /*background: red;*/
+    /*background: url('../Batch-master/PNG/16x16/previous.png') #fafafa;*/
+    background-image: url('../Batch-master/PNG/16x16/previous.png');
+    /*margin-right: -9px;*/
+    /*right: -9px;*/
 }
 input[type=range]::-webkit-slider-thumb {
-    background: #ffffff;
-    border: 1px solid #000000;
+    background-color: #fafafa;
+    border: 1px solid #999;
+    /*border-radius: 50%;*/
     border-radius: 3px;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d; /* Add cool effects to your sliders! */
+    box-shadow: 1px 1px 1px #000/*, 0px 0px 1px #0d0d0d*/; /* Add cool effects to your sliders! */
     cursor: -webkit-grab;
-    height: 36px;
-    margin-top: -14px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    width: 24px;
+    height: 24px;
+    margin-top: -12px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
+    width: 18px;
 
     position: relative;
     z-index: 999;
+
+
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 /* All the same stuff for Firefox */
 input[type=range]::-moz-range-thumb {
     background: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 3px;
+    border: 1px solid #999;
+    border-radius: 50%;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     cursor: pointer;
-    height: 36px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
 
     position: relative;
     z-index: 999;
@@ -64,12 +80,12 @@ input[type=range]::-moz-range-thumb {
 /* All the same stuff for IE */
 input[type=range]::-ms-thumb {
     background: #ffffff;
-    border: 1px solid #000000;
-    border-radius: 3px;
+    border: 1px solid #999;
+    border-radius: 50%;
     box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
     cursor: pointer;
-    height: 36px;
-    width: 24px;
+    height: 30px;
+    width: 30px;
 
     position: relative;
     z-index: 999;
@@ -82,16 +98,21 @@ input[type=range]::-ms-thumb {
 /* TRACK **************************************************************************************************************/
 input[type=range]::-webkit-slider-runnable-track {
     width: 100%;
-    height: 4px;
+    /*height: 2px;*/
+    height: 0;
     cursor: pointer;
-    box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
-    background: #3071a9;
-    border-radius: 1.3px;
-    border: 0.2px solid #010101;
+    /*box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;*/
+    /*background: #3071a9;*/
+    background: #999;
+    /*border-radius: 1.3px;*/
+    /*border: 0.2px solid #010101;*/
+    border: solid 1px #999;
+    /*border: none;*/
 }
 
 input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #367ebd;
+    /*background: #367ebd;*/
+    /*background: red;*/
 }
 
 input[type=range]::-moz-range-track {

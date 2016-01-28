@@ -8,11 +8,13 @@
     <link href="newui.css" rel="stylesheet">
     <link href="css/mobile_layout.css" rel="stylesheet">
     <link href="css/range.css" rel="stylesheet">
+    <link href="css/multi-select.css" rel="stylesheet">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/detailed_table_tryouts.js"></script>
     <script src="js/mobile_container.js"></script>
     <script src="js/mobile_layout/mobile.js"></script>
     <script src="js/mobile_layout/range_group.js"></script>
+    <script src="js/mobile_layout/multi_select.js"></script>
 </head>
 <body>
 
@@ -72,8 +74,8 @@
 <a class="trigger-close" href="#">
     <span class="batch-icon">&#xf165;</span>
 </a>
+<h2 class="title">Add Spending</h2>
 <form class="form-add-new">
-    <h2 class="title">Add Spending</h2>
 
     <div class="form-group date">
         <label>On</label>
@@ -279,14 +281,41 @@
     <form>
         <label for="amount">Amount:</label>
         <div class="range-group" id="amount">
-            <input type="range" name="amount-min" id="amount-min" class="min" value="0">
-            <input type="range" name="amount-max" id="amount-max" class="max" value="100">
+            <input type="range" name="amount-min" id="amount-min" class="min" value="0" step="1">
+            <input type="range" name="amount-max" id="amount-max" class="max" value="100" step="1">
         </div>
 
         <label for="amount">Date:</label>
         <div class="range-group" id="amount">
             <input type="range" name="amount-min" id="amount-min" class="min" value="0">
             <input type="range" name="amount-max" id="amount-max" class="max" value="100">
+        </div>
+
+        <label>Tags:</label>
+        <div class="multi-select">
+            <a class="heading">&nbsp;&nbsp;Add</a>
+            <ul class="list-selected">
+            </ul>
+            <ul class="list-available">
+                <li class="item">
+                    <a href="#">#coffee</a>
+                </li>
+                <li class="item">
+                    <a href="#">#lunch</a>
+                </li>
+                <li class="item">
+                    <a href="#">#monthly</a>
+                </li>
+                <li class="item">
+                    <a href="#">#party</a>
+                </li>
+                <li class="item">
+                    <a href="#">#online-order</a>
+                </li>
+                <li class="item">
+                    <a href="#">#other</a>
+                </li>
+            </ul>
         </div>
     </form>
 </div>
