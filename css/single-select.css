@@ -1,4 +1,4 @@
-.single-select, .multi-select {
+.multi-select {
     background: #666;
     color: #bbb;
     border-radius: 6px;
@@ -8,7 +8,7 @@
     padding: 10px;
 }
 
-.single-select ul, .multi-select ul {
+.multi-select ul {
     list-style: none;
     padding: 0;
     margin: 0;
@@ -46,17 +46,14 @@
     height: auto;
 }
 
-.single-select .list-available .item:before,
 .multi-select .list-available .item:before {
     content: "\f020 ";
     font-family: "Batch";
 }
 
-.single-select .list-available .item.selected,
 .multi-select .list-available .item.selected {
     color: #fafafa;
 }
-.single-select .list-available .item.selected:before,
 .multi-select .list-available .item.selected:before {
     content: "\f164 ";
 }

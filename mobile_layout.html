@@ -15,6 +15,7 @@
     <script src="js/mobile_layout/mobile.js"></script>
     <script src="js/mobile_layout/range_group.js"></script>
     <script src="js/mobile_layout/multi_select.js"></script>
+    <script src="js/mobile_layout/single_select.js"></script>
 </head>
 <body>
 
@@ -27,30 +28,30 @@
         </div>
         <div class="nav-user">
             <!--<img src="Batch-master/SVG/user-4.svg" class="icon">-->
-            <a href="#">
-                <span class="batch-icon">&#xf046;</span>
+            <a href="#" id="nav-user">
+                <span class="batch-icon">&#xf044;</span>
             </a>
         </div>
     </div>
     <div class="navigation">
-        <div class="nav-column" id="nav-new">
+        <div class="nav-column">
             <!--<img src="Batch-master/SVG/add.svg" class="icon">-->
-            <a href="#">
-                <span class="batch-icon">&#xf14c;</span>
+            <a href="#" id="nav-new">
+                <span class="batch-icon">&#xf015;</span>
                 New
             </a>
         </div>
-        <div class="nav-column" id="nav-filter">
+        <div class="nav-column">
             <!--<img src="Batch-master/SVG/intersect.svg" class="icon">-->
-            <a href="#">
+            <a href="#" id="nav-filter">
                 <span class="batch-icon">&#xf11e;</span>
                 Filter
             </a>
         </div>
-        <div class="nav-column" id="nav-group">
+        <div class="nav-column">
             <!--<img src="Batch-master/SVG/layout-content-right-2.svg" class="icon">-->
-            <a href="#">
-                <span class="batch-icon">&#xf028;</span>
+            <a href="#" id="nav-group">
+                <span class="batch-icon">&#xf127;</span>
                 Group
             </a>
         </div>
@@ -267,8 +268,8 @@
         <textarea id="description" name="description"></textarea>
     </div>
     <div class="button-row-2">
-        <button class="button secondary">Cancel</button>
-        <button class="button main">Add</button>
+        <button class="button secondary"><span class="batch-icon">&#xf165;</span> Cancel</button>
+        <button class="button main"><span class="batch-icon">&#xf01d;</span> Add</button>
     </div>
 </form>
 </div>
@@ -318,6 +319,53 @@
             </ul>
         </div>
     </form>
+    <div class="button-row-2">
+        <button class="button secondary"><span class="batch-icon">&#xf165;</span> Cancel</button>
+        <button class="button main"><span class="batch-icon">&#xf164;</span> Apply</button>
+    </div>
+</div>
+
+<div class="floater" id="floater-group">
+    <a class="trigger-close" href="#">
+        <span class="batch-icon">&#xf165;</span>
+    </a>
+    <h2 class="title">Apply Grouping</h2>
+    <div class="single-select">
+        <ul class="list-available">
+            <li class="item selected default">
+                <a href="#">No grouping</a>
+            </li>
+            <li class="item">
+                <a href="#">Day total</a>
+            </li>
+            <li class="item">
+                <a href="#">Week total</a>
+            </li>
+            <li class="item">
+                <a href="#">Month total</a>
+            </li>
+            <li class="item">
+                <a href="#">Year total</a>
+            </li>
+        </ul>
+    </div>
+    <div class="button-row-2">
+        <button class="button secondary"><span class="batch-icon">&#xf165;</span> Cancel</button>
+        <button class="button main"><span class="batch-icon">&#xf164;</span> Apply</button>
+    </div>
+</div>
+
+<div class="floater" id="floater-user">
+    <a class="trigger-close" href="#">
+        <span class="batch-icon">&#xf165;</span>
+    </a>
+    <div class="avatar">
+        <span class="batch-icon">&#xf044;</span>
+    </div>
+    <h2 class="title">Username</h2>
+    <div>
+        <button class="button main"><span class="batch-icon">&#xf02b;</span> Logout</button>
+    </div>
 </div>
 
 </body>

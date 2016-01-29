@@ -105,7 +105,9 @@ a {
 
 
 
-
+.button-row-2 {
+    margin-top: 10px;
+}
 .button-row-2 .button {
     float: left;
     width: calc(50% - 5px);
@@ -174,4 +176,10 @@ a {
 .range-group input[type="range"].max {
     left: 18px;
     right: 0;
+}
+
+.avatar {
+    margin-top: 15px;
+    font-size: 72px;
+    text-align: center;
 }
