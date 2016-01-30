@@ -2,7 +2,7 @@
 /* RESET **************************************************************************************************************/
 input[type=range] {
     -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
-    width: calc(100% - 18px); /* Specific width is required for Firefox. */
+    width: calc(100% - 24px); /* Specific width is required for Firefox. */
 }
 
 input[type=range]::-webkit-slider-thumb {
@@ -33,14 +33,16 @@ input[type=range]::-webkit-slider-thumb:active {
 input[type=range].min::-webkit-slider-thumb {
     /*background: red;*/
     /*background: url('../Batch-master/PNG/16x16/next.png') #fafafa;*/
-    background-image: url('../Batch-master/PNG/16x16/next.png');
+    /*background-image: url('../Batch-master/PNG/16x16/next.png');*/
+    background-image: url('../Batch-master/_mod/next_gray.png');
     /*margin-left: -9px;*/
     /*left: -9px;*/
 }
 input[type=range].max::-webkit-slider-thumb {
     /*background: red;*/
     /*background: url('../Batch-master/PNG/16x16/previous.png') #fafafa;*/
-    background-image: url('../Batch-master/PNG/16x16/previous.png');
+    /*background-image: url('../Batch-master/PNG/16x16/previous.png');*/
+    background-image: url('../Batch-master/_mod/previous_gray.png');
     /*margin-right: -9px;*/
     /*right: -9px;*/
 }
@@ -49,11 +51,11 @@ input[type=range]::-webkit-slider-thumb {
     border: 1px solid #999;
     /*border-radius: 50%;*/
     border-radius: 3px;
-    box-shadow: 1px 1px 1px #000/*, 0px 0px 1px #0d0d0d*/; /* Add cool effects to your sliders! */
+    box-shadow: 0px 1px 1px #000/*, 0px 0px 1px #0d0d0d*/; /* Add cool effects to your sliders! */
     cursor: -webkit-grab;
     height: 24px;
     margin-top: -12px; /* You need to specify a margin in Chrome, but in Firefox and IE it is automatic */
-    width: 18px;
+    width: 24px;
 
     position: relative;
     z-index: 999;

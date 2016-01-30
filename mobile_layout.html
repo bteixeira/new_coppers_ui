@@ -283,14 +283,17 @@
     <form>
         <label for="amount">Amount:</label>
         <div class="range-group" id="amount">
-            <input type="range" name="amount-min" id="amount-min" class="min" value="0" step="1">
-            <input type="range" name="amount-max" id="amount-max" class="max" value="100" step="1">
+            <input type="range" name="amount-min" id="amount-min" class="min" value="0" step="0.01">
+            <input type="range" name="amount-max" id="amount-max" class="max" value="100" step="0.01">
+            <div class="value-min">&euro; 0.00</div>
+            <div class="value-max">&euro; 100.00</div>
         </div>
 
 
         <div class="date-picker filter unselected">
             <input type="checkbox" id="date-from">
             <label for="date-from">From:</label>
+            <div class="button-group">
             <select>
                 <option>Jan</option>
                 <option>Feb</option>
@@ -397,9 +400,11 @@
                 </table>
             </div>
         </div>
+        </div>
         <div class="date-picker filter unselected">
             <input type="checkbox" id="date-to">
             <label for="date-to">To:</label>
+            <div class="button-group">
             <select>
                 <option>Jan</option>
                 <option>Feb</option>
@@ -505,6 +510,7 @@
                     </tbody>
                 </table>
             </div>
+        </div>
         </div>
 
         <label>Tags:</label>

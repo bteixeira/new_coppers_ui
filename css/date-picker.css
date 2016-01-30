@@ -1,14 +1,16 @@
 .date-picker {
     position: relative;
+    margin-bottom: 10px;
 }
 
-.date-picker.unselected, .date-picker.unselected button, .date-picker.unselected select {
+.date-picker.unselected button, .date-picker.unselected select {
     color: #d1d1d1;
+    border-radius: 3px;
 }
 
 .date-picker button {
     width: auto;
-    min-width: auto;
+    min-width: 60px;
     padding: 4px;
     background: white;
     color: #7b7b7b;
@@ -19,11 +21,23 @@
 .date-picker select {
     padding: 3px;
     width: auto;
+    min-width: 60px;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.date-picker .button-group {
+    float: right;
+}
+.date-picker:after {
+    content: "";
+    clear: both;
+    display: block;
 }
 
 .date-picker input[type="checkbox"] {
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+    vertical-align: middle;
 }
 
 .date-picker .calendar-popup {

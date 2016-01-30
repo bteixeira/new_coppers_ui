@@ -38,4 +38,9 @@ $(function () {
     $('.date-picker input[type="checkbox"]').on('click', function (ev) {
         $(this).closest('.date-picker').toggleClass('unselected', !this.checked);
     });
+
+    $('.date-picker button, .date-picker select').on('click', function() {
+        $(this).closest('.date-picker').find('input[type="checkbox"]').prop('checked', true);
+        $(this).closest('.date-picker').removeClass('unselected');
+    });
 });

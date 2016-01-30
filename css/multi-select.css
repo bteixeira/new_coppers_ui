@@ -1,11 +1,12 @@
 .single-select, .multi-select {
-    background: #666;
-    color: #bbb;
-    border-radius: 6px;
-    border-color: #fafafa;
+    background: #eaeaea;
+    /*color: #bbb;*/
+    border-radius: 3px;
+    border-color:   #eaeaea;
     border-style: inset;
     border-width: 2px;
-    padding: 10px;
+    padding: 5px;
+    margin: 5px 0;
 }
 
 .single-select ul, .multi-select ul {
@@ -21,12 +22,13 @@
 
 .multi-select .list-selected {
     color: #fafafa;
-    border-bottom: dashed 1px #fafafa;
+    /*border-bottom: dashed 1px #fafafa;*/
+    border-bottom: dashed 1px #999;
     margin: 10px 0 2px;
 }
 
 .multi-select .heading {
-    color: #fafafa;
+    /*color: #fafafa;*/
     font-weight: bold;
 }
 .multi-select .heading:before {

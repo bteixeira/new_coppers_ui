@@ -4,10 +4,13 @@
     - find a way for the user to input a precise number on the price slider
     - get arrow icon in gray
 
-- come up with date rage widget
+V come up with date range widget
+
+- add overlay around calendar when picking date
 
 - tags/accounts box:
     - improve the add/close button. probably move it under and change the text
+    - when unselecting items, prepend instead of appending
     - come up with a way to toggle between "only these" and "all but these"
     - show an indication "(showing all)" when no filter applied
     - make box height transition smoothly
@@ -35,3 +38,11 @@
     - make date row stick
     - make all rows consistent by eliminating the border on odd rows
     - make rows clickable, bring up the floater with prefilled fields, possibly disabled until click
+
+- fix webfont, decide on it and make it available, set font size
+
+- make no-results screen
+
+- make no-data-yet screen
+
+- add password change screen
