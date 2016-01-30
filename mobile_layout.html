@@ -9,6 +9,7 @@
     <link href="css/mobile_layout.css" rel="stylesheet">
     <link href="css/range.css" rel="stylesheet">
     <link href="css/multi-select.css" rel="stylesheet">
+    <link href="css/date-picker.css" rel="stylesheet">
     <script src="js/jquery-2.1.4.js"></script>
     <script src="js/detailed_table_tryouts.js"></script>
     <script src="js/mobile_container.js"></script>
@@ -286,10 +287,224 @@
             <input type="range" name="amount-max" id="amount-max" class="max" value="100" step="1">
         </div>
 
-        <label for="amount">Date:</label>
-        <div class="range-group" id="amount">
-            <input type="range" name="amount-min" id="amount-min" class="min" value="0">
-            <input type="range" name="amount-max" id="amount-max" class="max" value="100">
+
+        <div class="date-picker filter unselected">
+            <input type="checkbox" id="date-from">
+            <label for="date-from">From:</label>
+            <select>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+                <option>Apr</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dec</option>
+            </select>
+            <button class="trigger-calendar">
+                <span class="value">16</span>
+                <span class="batch-icon">&#xf011;</span>
+            </button>
+            <select>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option selected>2016</option>
+            </select>
+            <div class="calendar-popup">
+                <table>
+                    <thead>
+                        <tr>
+                            <td class="week-number"></td>
+                            <td>M</td>
+                            <td>T</td>
+                            <td>W</td>
+                            <td>T</td>
+                            <td>F</td>
+                            <td class="weekend">S</td>
+                            <td class="weekend">S</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="week-number">53</td>
+                            <td class="blurred">28</td>
+                            <td class="blurred">29</td>
+                            <td class="blurred">30</td>
+                            <td class="blurred">31</td>
+                            <td>1</td>
+                            <td class="weekend">2</td>
+                            <td class="weekend">3</td>
+                        </tr>
+                        <tr>
+                            <td class="week-number">1</td>
+                            <td>4</td>
+                            <td>5</td>
+                            <td>6</td>
+                            <td>7</td>
+                            <td>8</td>
+                            <td class="weekend">9</td>
+                            <td class="weekend">10</td>
+                        </tr>
+                        <tr>
+                            <td class="week-number">2</td>
+                            <td>11</td>
+                            <td>12</td>
+                            <td>13</td>
+                            <td>14</td>
+                            <td>15</td>
+                            <td class="weekend">16</td>
+                            <td class="weekend">17</td>
+                        </tr>
+                        <tr>
+                            <td class="week-number">3</td>
+                            <td>18</td>
+                            <td>19</td>
+                            <td>20</td>
+                            <td>21</td>
+                            <td>22</td>
+                            <td class="weekend">23</td>
+                            <td class="weekend">24</td>
+                        </tr>
+                        <tr>
+                            <td class="week-number">4</td>
+                            <td>25</td>
+                            <td>26</td>
+                            <td>27</td>
+                            <td>28</td>
+                            <td>29</td>
+                            <td class="weekend">30</td>
+                            <td class="weekend">31</td>
+                        </tr>
+                        <tr>
+                            <td class="week-number">5</td>
+                            <td class="blurred">1</td>
+                            <td class="blurred">2</td>
+                            <td class="blurred">3</td>
+                            <td class="blurred">4</td>
+                            <td class="blurred">5</td>
+                            <td class="blurred weekend">6</td>
+                            <td class="blurred weekend">7</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="date-picker filter unselected">
+            <input type="checkbox" id="date-to">
+            <label for="date-to">To:</label>
+            <select>
+                <option>Jan</option>
+                <option>Feb</option>
+                <option>Mar</option>
+                <option>Apr</option>
+                <option>May</option>
+                <option>Jun</option>
+                <option>Jul</option>
+                <option>Aug</option>
+                <option>Sep</option>
+                <option>Oct</option>
+                <option>Nov</option>
+                <option>Dec</option>
+            </select>
+            <button class="trigger-calendar">
+                <span class="value">16</span>
+                <span class="batch-icon">&#xf011;</span>
+            </button>
+            <select>
+                <option>2010</option>
+                <option>2011</option>
+                <option>2012</option>
+                <option>2013</option>
+                <option>2014</option>
+                <option>2015</option>
+                <option selected>2016</option>
+            </select>
+            <div class="calendar-popup">
+                <table>
+                    <thead>
+                    <tr>
+                        <td class="week-number"></td>
+                        <td>M</td>
+                        <td>T</td>
+                        <td>W</td>
+                        <td>T</td>
+                        <td>F</td>
+                        <td class="weekend">S</td>
+                        <td class="weekend">S</td>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td class="week-number">53</td>
+                        <td class="blurred">28</td>
+                        <td class="blurred">29</td>
+                        <td class="blurred">30</td>
+                        <td class="blurred">31</td>
+                        <td>1</td>
+                        <td class="weekend">2</td>
+                        <td class="weekend">3</td>
+                    </tr>
+                    <tr>
+                        <td class="week-number">1</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                        <td>8</td>
+                        <td class="weekend">9</td>
+                        <td class="weekend">10</td>
+                    </tr>
+                    <tr>
+                        <td class="week-number">2</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                        <td>15</td>
+                        <td class="weekend">16</td>
+                        <td class="weekend">17</td>
+                    </tr>
+                    <tr>
+                        <td class="week-number">3</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                        <td>22</td>
+                        <td class="weekend">23</td>
+                        <td class="weekend">24</td>
+                    </tr>
+                    <tr>
+                        <td class="week-number">4</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                        <td>29</td>
+                        <td class="weekend">30</td>
+                        <td class="weekend">31</td>
+                    </tr>
+                    <tr>
+                        <td class="week-number">5</td>
+                        <td class="blurred">1</td>
+                        <td class="blurred">2</td>
+                        <td class="blurred">3</td>
+                        <td class="blurred">4</td>
+                        <td class="blurred">5</td>
+                        <td class="blurred weekend">6</td>
+                        <td class="blurred weekend">7</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
 
         <label>Tags:</label>
@@ -315,6 +530,29 @@
                 </li>
                 <li class="item">
                     <a href="#">#other</a>
+                </li>
+            </ul>
+        </div>
+        <label>Accounts:</label>
+        <div class="multi-select">
+            <a class="heading">&nbsp;&nbsp;Add</a>
+            <ul class="list-selected">
+            </ul>
+            <ul class="list-available">
+                <li class="item">
+                    <a href="#">Checking</a>
+                </li>
+                <li class="item">
+                    <a href="#">Savings</a>
+                </li>
+                <li class="item">
+                    <a href="#">VISA</a>
+                </li>
+                <li class="item">
+                    <a href="#">MasterCard</a>
+                </li>
+                <li class="item">
+                    <a href="#">PayPal</a>
                 </li>
             </ul>
         </div>

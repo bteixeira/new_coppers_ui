@@ -1,3 +1,18 @@
+/*::-moz-selection {*/
+  /*background: #00cce9;*/
+/*}*/
+
+/*::selection {*/
+  /*background: #00cce9;*/
+/*}*/
+
+/*select::selection {*/
+  /*background: #00cce9;*/
+/*}*/
+/*select::-moz-selection {*/
+  /*background: #00cce9;*/
+/*}*/
+
 body,
 html {
   background-color: #fafafa;

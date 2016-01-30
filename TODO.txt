@@ -1,0 +1,37 @@
+- slider
+    - style slider thumbs. probably make them square, a little like the icons everywhere.
+    - add price slider numbers so the user can know how much it is. change step to 1 cent.
+    - find a way for the user to input a precise number on the price slider
+    - get arrow icon in gray
+
+- come up with date rage widget
+
+- tags/accounts box:
+    - improve the add/close button. probably move it under and change the text
+    - come up with a way to toggle between "only these" and "all but these"
+    - show an indication "(showing all)" when no filter applied
+    - make box height transition smoothly
+    - come up with better color scheme including the borders
+    - solve that issue where you see a ghost button when you remove it while the box is collapsed
+    - change the approach so that the filters can be applied even without closing the box (might require no changes)
+
+- grouping floater needs more context. add subtitle and create two separate sections, group by time and group by tag/account. or not.
+
+- come up with better color scheme for the buttons (gray/orange no)
+
+- make apply/cancel buttons work on all floaters (simply close the floater)
+
+- add overlay behind floater
+- make that overlay clickable, it closes the floater
+
+- user floater: simply add vertical more margin on avatar
+
+- try out fixed nav bar
+- fix floater floating around on android when scrolling page
+
+- data table
+    - try out side padding on data table
+    - come up with color scheme for data table so that date rows are consistent (create multiple tables if needed)
+    - make date row stick
+    - make all rows consistent by eliminating the border on odd rows
+    - make rows clickable, bring up the floater with prefilled fields, possibly disabled until click
