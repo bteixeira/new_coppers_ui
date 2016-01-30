@@ -1,8 +1,8 @@
 - slider
-    - style slider thumbs. probably make them square, a little like the icons everywhere.
-    - add price slider numbers so the user can know how much it is. change step to 1 cent.
+    V style slider thumbs. probably make them square, a little like the icons everywhere.
+    V add price slider numbers so the user can know how much it is. change step to 1 cent.
     - find a way for the user to input a precise number on the price slider
-    - get arrow icon in gray
+    V get arrow icon in gray
 
 V come up with date range widget
 
@@ -46,3 +46,5 @@ V come up with date range widget
 - make no-data-yet screen
 
 - add password change screen
+
+- test firefox

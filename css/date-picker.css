@@ -5,7 +5,6 @@
 
 .date-picker.unselected button, .date-picker.unselected select {
     color: #d1d1d1;
-    border-radius: 3px;
 }
 
 .date-picker button {
@@ -16,6 +15,7 @@
     color: #7b7b7b;
     border: solid 1px #d1d1d1;
     font-weight: normal;
+    border-radius: 3px;
 }
 
 .date-picker select {
@@ -24,6 +24,7 @@
     min-width: 60px;
     text-align: center;
     box-sizing: border-box;
+    border-radius: 3px;
 }
 
 .date-picker .button-group {
@@ -41,20 +42,23 @@
 }
 
 .date-picker .calendar-popup {
-    height: 0;
+    /*height: 0;*/
     overflow: hidden;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
-
+    display: none;
+    border: solid 1px #d1d1d1;
+    /*border-top: 0;*/
+    margin-top: 1px;
+    box-shadow: #666 0 1px 1px 0;
+    z-index: 100;
 }
 .date-picker .calendar-popup.onscreen {
-    border: solid 1px #d1d1d1;
-    border-top: 0;
-    height: auto;
-    box-shadow: #d1d1d1 0 1px 2px 0;
-    z-index: 100;
+
+    /*height: auto;*/
+    display: block;
 }
 
 .date-picker .calendar-popup table {
