@@ -48,3 +48,5 @@ V come up with date range widget
 - add password change screen
 
 - test firefox
+
+- on user floater, allow choosing english, german, or portuguese
