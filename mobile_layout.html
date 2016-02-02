@@ -299,12 +299,16 @@
     </a>
     <h2 class="title">Apply Filters</h2>
     <form>
-        <label for="amount">Amount:</label>
+        <div id="amount-text">
+            <input type="checkbox">
+            Amount from
+            <div class="value-min">&euro; 0.00</div>
+            to
+            <div class="value-max">&euro; 100.00</div>
+        </div>
         <div class="range-group" id="amount">
             <input type="range" name="amount-min" id="amount-min" class="min" value="0" step="0.01">
             <input type="range" name="amount-max" id="amount-max" class="max" value="100" step="0.01">
-            <div class="value-min">&euro; 0.00</div>
-            <div class="value-max">&euro; 100.00</div>
         </div>
 
 

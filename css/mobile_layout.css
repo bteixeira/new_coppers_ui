@@ -59,7 +59,15 @@ img.icon {
     padding: 15px 5px;
     /*border-bottom: dashed 1px #999;*/
     /*margin-bottom: 10px;*/
-    margin-top: 38px; /* HEADER HEIGHT */
+    /*margin-top: 38px; !* HEADER HEIGHT *!*/
+    position: fixed;
+    top: 40px;
+    width: 100%;
+    background-color: #fafafa;
+}
+
+.content {
+    margin-top: 88px;
 }
 
 a {
@@ -143,9 +151,14 @@ a {
     padding: 10px;
     left: 100%;
     width: 90%;
-    top: 38px;
-    bottom: 0;
-    transition: left 600ms;
+    top: 88px;
+    /*bottom: 0;*/
+    /*top: 0;*/
+    transition: left 600ms, box-shadow 600ms;
+    height: calc(100% - 88px);
+    /*padding-bottom: 0;*/
+    /*z-index: 999;*/
+    /*height: 50%;*/
 }
 
 .floater .trigger-close {
@@ -157,6 +170,7 @@ a {
 
 .floater.onscreen {
     left: 10%;
+    box-shadow: -100px 0 rgba(0, 0, 0, 0.7);
 }
 
 
@@ -183,14 +197,24 @@ a {
 }
 
 .range-group .value-min {
-    float: left;
+    /*float: left;*/
 }
-.range-group .value-min, .value-max {
+#amount-text {
     font-size: 12px;
-    margin-top: 10px;
+}
+#amount-text input[type="checkbox"] {
+    margin: 0;
+    vertical-align: middle;
+}
+/*.range-group .value-min, .value-max {*/
+#amount-text .value-min, #amount-text .value-max {
+    /*font-size: 12px;*/
+    /*margin-top: 10px;*/
+    font-weight: bold;
+    display: inline;
 }
 .range-group .value-max {
-    float: right;
+    /*float: right;*/
 }
 .range-group:after {
     display: block;
@@ -208,7 +232,7 @@ a {
     text-align: center;
     /*height: 100%;*/
     font-size: 14px;
-    padding: 40px 0;
+    padding: 60px;
 }
 #no-data-yet .icon, #no-results .icon {
     font-size: 60px;
