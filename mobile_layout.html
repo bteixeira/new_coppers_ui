@@ -531,9 +531,12 @@
         </div>
         </div>
 
-        <label>Tags:</label>
-        <div class="multi-select">
-            <a class="heading">&nbsp;&nbsp;Add</a>
+        <!--<label>Tags:</label>-->
+        <div class="multi-select empty">
+            <div class="hint">
+                <span class="hint-empty">(No tag filtering)</span>
+                <span class="hint-non-empty">Show only for these tags:</span>
+            </div>
             <ul class="list-selected">
             </ul>
             <ul class="list-available">
@@ -556,10 +559,17 @@
                     <a href="#">#other</a>
                 </li>
             </ul>
+            <a class="heading">&nbsp;&nbsp;
+                <span class="text-open">Add tag filter</span>
+                <span class="text-close">Ok</span>
+            </a>
         </div>
-        <label>Accounts:</label>
-        <div class="multi-select">
-            <a class="heading">&nbsp;&nbsp;Add</a>
+        <!--<label>Accounts:</label>-->
+        <div class="multi-select empty">
+            <div class="hint">
+                <span class="hint-empty">(No account filtering)</span>
+                <span class="hint-non-empty">Show only for these accounts:</span>
+            </div>
             <ul class="list-selected">
             </ul>
             <ul class="list-available">
@@ -579,6 +589,10 @@
                     <a href="#">PayPal</a>
                 </li>
             </ul>
+            <a class="heading">&nbsp;&nbsp;
+                <span class="text-open">Add account filter</span>
+                <span class="text-close">Ok</span>
+            </a>
         </div>
     </form>
     <div class="button-row-2">

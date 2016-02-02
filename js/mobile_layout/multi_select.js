@@ -20,9 +20,14 @@ $(function () {
                 $items = $listSelected.find('.item.inactive');
                 $items.remove().removeClass('inactive').appendTo($listAvailable);
 
-                $multiSelect.removeClass('expanded');
+                $multiSelect.toggleClass('empty', $listSelected.find('.item').length === 0);
+
+                $listAvailable.smoothlyCollapse(null, null, function () {
+                    $multiSelect.removeClass('expanded');
+                });
             } else {
                 $multiSelect.toggleClass('expanded', true);
+                $listAvailable.smoothlyExpand();
             }
 
         });
@@ -34,10 +39,14 @@ $(function () {
 
         $multiSelect.on('click', '.list-selected .item', function (ev) {
             ev.preventDefault();
+            var $this = $(this);
             if ($multiSelect.is('.expanded')) {
-                $(this).toggleClass('inactive');
+                $this.toggleClass('inactive');
             } else {
-                $(this).remove().appendTo($listAvailable);
+                setTimeout(function () {
+                    $this.remove().appendTo($listAvailable);
+                    $multiSelect.toggleClass('empty', $listSelected.find('.item').length === 0);
+                }, 150);
             }
         });
 

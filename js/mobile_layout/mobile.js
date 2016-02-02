@@ -31,30 +31,14 @@ $(function () {
 
         var $picker = $(this).closest('.date-picker');
         var $popup = $picker.find('.calendar-popup');
-        //$popup.transition
-        var h;
         if ($popup.is('.onscreen')) {
-            h = $popup.outerHeight();
-            $popup.css('height', h + 'px');
-            $popup[0].offsetHeight;
-            $popup.css('transition', 'height linear 150ms');
-            $popup.one('transitionend', function () {
-                $popup.css('height', '');
-                $popup.css('transition', '');
+            $popup.smoothlyCollapse(150, 'linear', function () {
                 $popup.removeClass('onscreen');
             });
-            $popup.css('height', '0');
         } else {
-            $popup.toggleClass('onscreen', true);
-            h = $popup.outerHeight();
-            $popup.css('height', '0');
-            $popup[0].offsetHeight;
-            $popup.css('transition', 'height 300ms');
-            $popup.one('transitionend', function () {
-                $popup.css('height', '');
-                $popup.css('transition', '');
-            });
-            $popup.css('height', h + 'px');
+            $popup.toggleClass('onscreen', true).smoothlyExpand();
+
+
         }
 
     });
@@ -74,6 +58,39 @@ $(function () {
     });
 });
 
-$.fn.smoothlyExpand = function () {
-
+$.fn.smoothlyCollapse = function (time, fun, cb) {
+    time = time || 150;
+    fun = fun || 'linear';
+    var $this = $(this);
+    var h = $this.outerHeight();
+    $this.css('height', h + 'px');
+    $this[0].offsetHeight;
+    $this.css('transition', 'height ' + fun + ' ' + time + 'ms');
+    $this.one('transitionend', function () {
+        $this.css('height', '');
+        $this.css('transition', '');
+        if (cb) {
+            cb();
+        }
+    });
+    $this.css('height', '0');
+    return $this;
+};
+$.fn.smoothlyExpand = function (time, fun, cb) {
+    time = time || 300;
+    fun = fun || '';
+    var $this = $(this);
+    var h = $this.outerHeight();
+    $this.css('height', '0');
+    $this[0].offsetHeight;
+    $this.css('transition', 'height ' + fun + ' ' + time + 'ms');
+    $this.one('transitionend', function () {
+        $this.css('height', '');
+        $this.css('transition', '');
+        if (cb) {
+            cb();
+        }
+    });
+    $this.css('height', h + 'px');
+    return $this;
 };
