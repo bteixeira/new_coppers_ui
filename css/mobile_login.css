@@ -1,0 +1,84 @@
+body, html {
+    background: #00cce9;
+    color: #fafafa;
+}
+
+.header.login {
+    background: #fafafa;
+    color: #e1e1e1;
+    height: 40px;
+    border-bottom: solid 2px #eaeaea;
+    box-shadow: 0 0px 2px #eaeaea;
+}
+
+.header.login .title {
+    color: inherit;
+    text-align: center;
+    float: none;
+}
+
+#page-content {
+    margin-top: 40px;
+    padding: 20px;
+}
+
+#page-content > * {
+    position: relative;
+    z-index: 1;
+}
+
+#page-content button {
+    border-radius: 3px;
+    width: 50%;
+    float: right;
+    background: #e9cc00;
+    background: #ffe519;
+    /*background: #ff007f;*/
+    /*background: #ff7e19;*/
+    background: #ffaf00;
+    /*background: #ccb714;*/
+    /*border-width: 0;*/
+    font: bold 16px Ubuntu;
+    /*border: solid 1px #d1d1d1;*/
+}
+
+#page-content input {
+    width: 100%;
+    border-radius: 3px;
+    outline: 0;
+    border: solid 1px #d1d1d1;
+    height: 40px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    font: 16px Ubuntu;
+    color: #999;
+    padding: 9px;
+}
+#page-content input::placeholder {
+    color: #666;
+}
+#page-content input::-webkit-input-placeholder {
+    color: #eaeaea;
+}
+#page-content input::-moz-placeholder {
+    color: #666;
+}
+#page-content input:-ms-input-placeholder {
+    color: #666;
+}
+
+#page-content .hint {
+    font-size: 12px;
+    line-height: 18px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.floating-bg {
+    position: absolute;
+    z-index: 0;
+    font-size: 300px;
+    left: -35%;
+    top: 0;
+    color: #00d1f1;
+}
